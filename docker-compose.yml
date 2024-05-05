@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  haemosphere:
+    restart: unless-stopped
+    image: ${DOCKER_IMAGE_HAEMOSPHERE}
+    container_name: haemosphere-container
+    ports:
+      - "6543:6544" # development port
+      # - "8090:8090" # production port
+    volumes:
+      - ./haemosphere-data-public:/data
+      - ./config:/config
+    # below command uses development config
+    # to change to production, change
+    # development.ini to production-public/private.ini
+    # as needed.
+    command: pserve /config/development.ini
+

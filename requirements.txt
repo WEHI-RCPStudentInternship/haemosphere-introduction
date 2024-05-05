@@ -1,0 +1,7 @@
+genedataset==0.6.2
+pyramid-beaker==0.8
+pyramid-debugtoolbar==4.9
+pyramid-mailer==0.15.1
+pyramid-tm==2.4
+zope.sqlalchemy==1.6
+pyramid==1.5.7
